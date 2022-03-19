@@ -2,6 +2,8 @@ package com.example.smsspam;
 
 import android.content.res.AssetFileDescriptor;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.HandlerThread;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +11,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.ml.QaClient;
 
 import org.tensorflow.lite.Interpreter;
 
@@ -27,6 +31,18 @@ public class MainActivity extends AppCompatActivity {
     Button prediction;
     private HashMap<String, Integer> tokenMapping = new HashMap<String, Integer>();
     private static final int Model_input_size = 200;
+    private String vocab_file_name = "vocab.txt";
+    private String tflite_model_filename = "spam.tflite";
+
+    private static final int MAX_ANS_LEN = 32;
+    private static final int MAX_QUERY_LEN = 64;
+    private static final int MAX_SEQ_LEN = 384;
+    private static final boolean DO_LOWER_CASE = true;
+    private static final int PREDICT_ANS_NUM = 5;
+    private static final int NUM_LITE_THREADS = 4;
+
+    private static Handler handler;
+    private static QaClient qaClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
         prediction = (Button)findViewById(R.id.prediction);
         prediction.setOnClickListener(this::handlePredictionButtonClickEvent);
 
+        // Setup QA client to and background thread to run inference.
+        HandlerThread handlerThread = new HandlerThread("QAClient");
+        handlerThread.start();
+        handler = new Handler(handlerThread.getLooper());
+        qaClient = new QaClient(this);
+
         try {
             loadVocabularyFromAssets();
         } catch (IOException e) {
@@ -43,9 +65,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        handler.post(
+                () -> {
+                    qaClient.loadModel();
+                    qaClient.loadDictionary();
+                });
+    }
+
     public void loadVocabularyFromAssets() throws IOException {
 
-        final InputStream vocabTxtFileInputStream = getApplicationContext().getAssets().open("vocab.txt");
+        final InputStream vocabTxtFileInputStream = getApplicationContext().getAssets().open(vocab_file_name);
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(vocabTxtFileInputStream));
 
@@ -95,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
         float[][] processed_sms_message_input_for_model = tokenizeSMSInput(sms_message_input);
 
         try {
-            AssetFileDescriptor fileDescriptor = getApplicationContext().getAssets().openFd("spam.tflite");
+            AssetFileDescriptor fileDescriptor = getApplicationContext().getAssets().openFd(tflite_model_filename);
 
             FileInputStream inputStream = new  FileInputStream(fileDescriptor.getFileDescriptor());
 
@@ -117,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
             Log.d("Model Pred1", String.valueOf(output[0][0]));
 
-            Toast.makeText(getApplicationContext(), "Model Prediction is "+ String.valueOf(output[0][0]), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Model Prediction is "+ String.valueOf(output[0][0]), Toast.LENGTH_LONG).show();
 
             tflite.close();
 
@@ -129,7 +161,16 @@ public class MainActivity extends AppCompatActivity {
     public void handlePredictionButtonClickEvent(View view){
         String sms_input = this.sms_text_input.getText().toString();
 
-        makeSMSSpamPrediction(sms_input);
+        float[] probability_via_softmax = qaClient.predict(sms_input, "");
+
+        Toast.makeText(getApplicationContext(), "Wdfdf", Toast.LENGTH_LONG);
+
+        if(probability_via_softmax[0] > probability_via_softmax[1]){
+            Toast.makeText(getApplicationContext(), "Not Spam " + probability_via_softmax[0], Toast.LENGTH_LONG).show();
+        }
+        else{
+            Toast.makeText(getApplicationContext(), "Spam " + probability_via_softmax[1], Toast.LENGTH_LONG).show();
+        }
 
         this.sms_text_input.setText("");
     }

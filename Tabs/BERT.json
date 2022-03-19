@@ -1,0 +1,54 @@
+[
+	{
+		"title": "huggingface/tflite-android-transformers: DistilBERT / GPT-2 for on-device inference thanks to TensorFlow Lite with Android demo apps",
+		"url": "https://github.com/huggingface/tflite-android-transformers"
+	},
+	{
+		"title": "distilbert-base-uncased · Hugging Face",
+		"url": "https://huggingface.co/distilbert-base-uncased?text=The+goal+of+life+is+%5BMASK%5D."
+	},
+	{
+		"title": "Classify text with BERT  |  Text  |  TensorFlow",
+		"url": "https://www.tensorflow.org/text/tutorials/classify_text_with_bert"
+	},
+	{
+		"title": "mrm8488/bert-tiny-finetuned-sms-spam-detection · Hugging Face",
+		"url": "https://huggingface.co/mrm8488/bert-tiny-finetuned-sms-spam-detection"
+	},
+	{
+		"title": "mariagrandury/roberta-base-finetuned-sms-spam-detection · Hugging Face",
+		"url": "https://huggingface.co/mariagrandury/roberta-base-finetuned-sms-spam-detection?text=URGENT+Your+Mobile+number+has+been+awarded+with+a+%C3%83%C2%A5+2000+prize+GUARANTEED+Call+09061790121+from+land+line+Claim+3030+Valid+12hrs+only+150ppm"
+	},
+	{
+		"title": "SMS SPAM Federated Learning.ipynb - Colaboratory",
+		"url": "https://colab.research.google.com/drive/1u6qsJCwlTQO_CMq0YK-JFbEqBaJDiaQJ?authuser=5#scrollTo=wfEsHeKE8TkL"
+	},
+	{
+		"title": "BERT MODEL SMS Federated - Colaboratory",
+		"url": "https://colab.research.google.com/drive/1s8GGhXtLIAiBgv7z9Hur0juTyWBbv4J1?authuser=5#scrollTo=pGpZXh5Vwq-L"
+	},
+	{
+		"title": "BERT DOCS - Google Search",
+		"url": "https://www.google.com/search?q=BERT+DOCS&oq=BERT+DOCS+&aqs=chrome..69i57j69i60l2.1667j0j1&sourceid=chrome&ie=UTF-8"
+	},
+	{
+		"title": "Hugging Face DistilBert & Tensorflow for Custom Text Classification. | by Galina Blokh | Geek Culture | Medium",
+		"url": "https://medium.com/geekculture/hugging-face-distilbert-tensorflow-for-custom-text-classification-1ad4a49e26a7"
+	},
+	{
+		"title": "Import distilbert-base-uncased tokenizer to an android app along with the tflite model - 🤗Tokenizers - Hugging Face Forums",
+		"url": "https://discuss.huggingface.co/t/import-distilbert-base-uncased-tokenizer-to-an-android-app-along-with-the-tflite-model/3234/2"
+	},
+	{
+		"title": "DistilBERT",
+		"url": "https://huggingface.co/docs/transformers/model_doc/distilbert"
+	},
+	{
+		"title": "huggingface distilbert Android JAVA - Google Search",
+		"url": "https://www.google.com/search?q=huggingface+distilbert+Android+JAVA+&ei=NjcyYsTiDfil2roPxfOX0AY&ved=0ahUKEwjE1dzXq8v2AhX4klYBHcX5BWoQ4dUDCA4&uact=5&oq=huggingface+distilbert+Android+JAVA+&gs_lcp=Cgdnd3Mtd2l6EAMyBQghEKABMgUIIRCgATIFCCEQoAEyBQghEKABOgQIABBHOgUIABCABDoGCAAQFhAeOgcIIRAKEKABSgQIQRgASgQIRhgAUIkDWNsVYKgXaABwAngAgAGoAYgB2Q6SAQQwLjE0mAEAoAEByAEIwAEB&sclient=gws-wiz"
+	},
+	{
+		"title": "Failed to run on the given Interpreter: Regular TensorFlow ops are not supported by this interpreter. Make sure you apply/link the Flex delegate before inference. Node number 62011 (FlexSize) failed to prepare. · Issue #43277 · tensorflow/tensorflow",
+		"url": "https://github.com/tensorflow/tensorflow/issues/43277"
+	}
+]

@@ -1,0 +1,142 @@
+[
+	{
+		"title": "QaClient.java - tflite-android-transformers [GitHub] - Visual Studio Code - GitHub",
+		"url": "https://github.dev/huggingface/tflite-android-transformers"
+	},
+	{
+		"title": "distilbert-base-uncased · Hugging Face",
+		"url": "https://huggingface.co/distilbert-base-uncased?text=The+goal+of+life+is+%5BMASK%5D."
+	},
+	{
+		"title": "Classify text with BERT  |  Text  |  TensorFlow",
+		"url": "https://www.tensorflow.org/text/tutorials/classify_text_with_bert"
+	},
+	{
+		"title": "mrm8488/bert-tiny-finetuned-sms-spam-detection · Hugging Face",
+		"url": "https://huggingface.co/mrm8488/bert-tiny-finetuned-sms-spam-detection"
+	},
+	{
+		"title": "mariagrandury/roberta-base-finetuned-sms-spam-detection · Hugging Face",
+		"url": "https://huggingface.co/mariagrandury/roberta-base-finetuned-sms-spam-detection?text=URGENT+Your+Mobile+number+has+been+awarded+with+a+%C3%83%C2%A5+2000+prize+GUARANTEED+Call+09061790121+from+land+line+Claim+3030+Valid+12hrs+only+150ppm"
+	},
+	{
+		"title": "Hugging Face DistilBert & Tensorflow for Custom Text Classification. | by Galina Blokh | Geek Culture | Medium",
+		"url": "https://medium.com/geekculture/hugging-face-distilbert-tensorflow-for-custom-text-classification-1ad4a49e26a7"
+	},
+	{
+		"title": "Import distilbert-base-uncased tokenizer to an android app along with the tflite model - 🤗Tokenizers - Hugging Face Forums",
+		"url": "https://discuss.huggingface.co/t/import-distilbert-base-uncased-tokenizer-to-an-android-app-along-with-the-tflite-model/3234"
+	},
+	{
+		"title": "BERT",
+		"url": "https://huggingface.co/docs/transformers/v4.17.0/en/model_doc/bert#transformers.BertTokenizer"
+	},
+	{
+		"title": "huggingface distilbert Android JAVA - Google Search",
+		"url": "https://www.google.com/search?q=huggingface+distilbert+Android+JAVA+&ei=NjcyYsTiDfil2roPxfOX0AY&ved=0ahUKEwjE1dzXq8v2AhX4klYBHcX5BWoQ4dUDCA4&uact=5&oq=huggingface+distilbert+Android+JAVA+&gs_lcp=Cgdnd3Mtd2l6EAMyBQghEKABMgUIIRCgATIFCCEQoAEyBQghEKABOgQIABBHOgUIABCABDoGCAAQFhAeOgcIIRAKEKABSgQIQRgASgQIRhgAUIkDWNsVYKgXaABwAngAgAGoAYgB2Q6SAQQwLjE0mAEAoAEByAEIwAEB&sclient=gws-wiz"
+	},
+	{
+		"title": "Failed to run on the given Interpreter: Regular TensorFlow ops are not supported by this interpreter. Make sure you apply/link the Flex delegate before inference. Node number 62011 (FlexSize) failed to prepare. · Issue #43277 · tensorflow/tensorflow",
+		"url": "https://github.com/tensorflow/tensorflow/issues/43277"
+	},
+	{
+		"title": "Select TensorFlow operators  |  TensorFlow Lite",
+		"url": "https://www.tensorflow.org/lite/guide/ops_select#android_aar"
+	},
+	{
+		"title": "Meet - yfj-uknr-fgm",
+		"url": "https://meet.google.com/yfj-uknr-fgm?authuser=1"
+	},
+	{
+		"title": "java - Softmax Activation Implementation - Stack Overflow",
+		"url": "https://stackoverflow.com/questions/59841452/softmax-activation-implementation"
+	},
+	{
+		"title": "tensorflow/InterpreterFlexTest.java at master · tensorflow/tensorflow",
+		"url": "https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/java/src/test/java/org/tensorflow/lite/InterpreterFlexTest.java"
+	},
+	{
+		"title": "tflite-android-transformers/WordpieceTokenizer.java at master · huggingface/tflite-android-transformers",
+		"url": "https://github.com/huggingface/tflite-android-transformers/blob/master/bert/src/main/java/co/huggingface/android_transformers/bertqa/tokenization/WordpieceTokenizer.java"
+	},
+	{
+		"title": "margaretmz/awesome-tensorflow-lite: An awesome list of TensorFlow Lite models, samples, tutorials, tools and learning resources.",
+		"url": "https://github.com/margaretmz/awesome-tensorflow-lite#text"
+	},
+	{
+		"title": "examples/TextClassificationClient.java at master · tensorflow/examples",
+		"url": "https://github.com/tensorflow/examples/blob/master/lite/examples/text_classification/android/lib_interpreter/src/main/java/org/tensorflow/lite/examples/textclassification/client/TextClassificationClient.java"
+	},
+	{
+		"title": "Tejas-TA/Transformer-BERT-SMS-Spam-Detection: Spam SMS Detection Project implemented using NLP & Transformers. DistilBERT - a hugging face Transformer model for text classification is used to fine-tune to best suit data to achieve the best results. Multinomial Naive Bayes achieved an F1 score of 0.94, the model was deployed on the Flask server. Application deployed in Google Cloud Platform",
+		"url": "https://github.com/Tejas-TA/Transformer-BERT-SMS-Spam-Detection"
+	},
+	{
+		"title": "Build a Smart Question Answering System with Fine-Tuned BERT | by Deepesh Bhageria | Saarthi.ai | Medium",
+		"url": "https://medium.com/saarthi-ai/build-a-smart-question-answering-system-with-fine-tuned-bert-b586e4cfa5f5"
+	},
+	{
+		"title": "Spark NLP 3.4.2 ScalaDoc - com.johnsnowlabs.nlp.annotators.classifier.dl.DistilBertForSequenceClassification",
+		"url": "https://nlp.johnsnowlabs.com/api/com/johnsnowlabs/nlp/annotators/classifier/dl/DistilBertForSequenceClassification.html"
+	},
+	{
+		"title": "sparknlp.annotator.DistilBertForSequenceClassification — Spark NLP 3.4.2 documentation",
+		"url": "https://nlp.johnsnowlabs.com/api/python/reference/autosummary/sparknlp.annotator.DistilBertForSequenceClassification.html"
+	},
+	{
+		"title": "text plot — SHAP latest documentation",
+		"url": "https://shap.readthedocs.io/en/latest/example_notebooks/api_examples/plots/text.html"
+	},
+	{
+		"title": "c++ - How to invoke the Flex delegate for tflite interpreters? - Stack Overflow",
+		"url": "https://stackoverflow.com/questions/57658509/how-to-invoke-the-flex-delegate-for-tflite-interpreters"
+	},
+	{
+		"title": "tensorflow/InterpreterFlexTest.java at master · tensorflow/tensorflow",
+		"url": "https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/java/src/test/java/org/tensorflow/lite/InterpreterFlexTest.java"
+	},
+	{
+		"title": "Select TensorFlow operators  |  TensorFlow Lite",
+		"url": "https://www.tensorflow.org/lite/guide/ops_select"
+	},
+	{
+		"title": "Use pre-trained Huggingface models in TensorFlow Serving | by Luis Duarte | Towards Data Science",
+		"url": "https://towardsdatascience.com/use-pre-trained-huggingface-models-in-tensorflow-serving-d2761f7e69f6"
+	},
+	{
+		"title": "Failed to run on the given Interpreter: Regular TensorFlow ops are not supported by this interpreter. Make sure you apply/link the Flex delegate before inference. Node number 62011 (FlexSize) failed to prepare. · Issue #43277 · tensorflow/tensorflow",
+		"url": "https://github.com/tensorflow/tensorflow/issues/43277"
+	},
+	{
+		"title": "Select TensorFlow operators  |  TensorFlow Lite",
+		"url": "https://www.tensorflow.org/lite/guide/ops_select#android_aar"
+	},
+	{
+		"title": "Reduce TensorFlow Lite binary size",
+		"url": "https://www.tensorflow.org/lite/guide/reduce_binary_size"
+	},
+	{
+		"title": "SMS SPAM Federated Learning.ipynb - Colaboratory",
+		"url": "https://colab.research.google.com/drive/1u6qsJCwlTQO_CMq0YK-JFbEqBaJDiaQJ?authuser=1#scrollTo=WtEtbnduyngW"
+	},
+	{
+		"title": "Invalid output Tensor index: 1 when trying to run a tiny-yolov3 model on TFLite · Issue #39803 · tensorflow/tensorflow",
+		"url": "https://github.com/tensorflow/tensorflow/issues/39803"
+	},
+	{
+		"title": "tf.keras.losses.SparseCategoricalCrossentropy  |  TensorFlow Core v2.8.0",
+		"url": "https://www.tensorflow.org/api_docs/python/tf/keras/losses/SparseCategoricalCrossentropy"
+	},
+	{
+		"title": "DistilBERT",
+		"url": "https://huggingface.co/docs/transformers/model_doc/distilbert"
+	},
+	{
+		"title": "deep learning - how to convert logits to probability in binary classification in tensorflow? - Stack Overflow",
+		"url": "https://stackoverflow.com/questions/46416984/how-to-convert-logits-to-probability-in-binary-classification-in-tensorflow"
+	},
+	{
+		"title": "softmax function - Google Search",
+		"url": "https://www.google.com/search?q=softmax+function&oq=softmax+function+&aqs=chrome..69i57.1662j0j1&sourceid=chrome&ie=UTF-8"
+	}
+]
