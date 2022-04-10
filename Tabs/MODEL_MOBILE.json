@@ -1,0 +1,22 @@
+[
+	{
+		"title": "Model optimization  |  TensorFlow Lite",
+		"url": "https://www.tensorflow.org/lite/performance/model_optimization"
+	},
+	{
+		"title": "FedSpam/DistilBert_Fine_tunned.ipynb at main · RudreshVeerkhare/FedSpam",
+		"url": "https://github.com/RudreshVeerkhare/FedSpam/blob/main/models_generation/DistilBert_Fine_tunned.ipynb"
+	},
+	{
+		"title": "BERT MODEL SMS Federated - Colaboratory",
+		"url": "https://colab.research.google.com/drive/1s8GGhXtLIAiBgv7z9Hur0juTyWBbv4J1?authuser=5#scrollTo=AJS7FHQqS5lz"
+	},
+	{
+		"title": "On-Device Training with TensorFlow Lite",
+		"url": "https://www.tensorflow.org/lite/examples/on_device_training/overview"
+	},
+	{
+		"title": "examples/LiteMultipleSignatureModel.java at master · tensorflow/examples",
+		"url": "https://github.com/tensorflow/examples/blob/master/lite/examples/model_personalization/android/transfer_api/src/main/java/org/tensorflow/lite/examples/transfer/api/LiteMultipleSignatureModel.java"
+	}
+]

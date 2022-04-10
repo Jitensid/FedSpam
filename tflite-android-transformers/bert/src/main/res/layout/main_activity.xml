@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/submit_button"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="SMS Spam Prediction"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/qa_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Bert Classifier"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cord_layout"
+        android:layout_width="match_parent"
+        android:layout_height="731dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:translationY="80sp"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <Button
+                android:id="@+id/connect_button"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="300dp"
+                android:text="Connect"
+                app:layout_constraintEnd_toStartOf="@+id/load_data_button"
+                app:layout_constraintHorizontal_bias="0.053"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_box" />
+
+            <Button
+                android:id="@+id/train_button"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="300dp"
+                android:text="Train"
+                app:layout_constraintHorizontal_bias="0.91"
+                app:layout_constraintStart_toEndOf="@+id/load_data_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_box" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:hint="Enter Message"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/response_textview"
+                android:layout_width="0dp"
+                android:layout_height="167dp"
+                android:background="#FAF2F2"
+                android:gravity="bottom"
+                android:nestedScrollingEnabled="true"
+                android:overScrollMode="always"
+                android:scrollbarAlwaysDrawHorizontalTrack="false"
+                android:scrollbars="vertical"
+                android:text="Welcome to FedSpam! \n"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="12sp"
+
+                app:layout_constraintBottom_toTopOf="@+id/load_data_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_box" />
+
+            <Button
+                android:id="@+id/load_data_button"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="300dp"
+                android:text="Add Data"
+                app:layout_constraintEnd_toStartOf="@+id/train_button"
+                app:layout_constraintStart_toEndOf="@+id/connect_button"
+                app:layout_constraintTop_toBottomOf="@+id/input_box" />
+
+            <TextView
+                android:id="@+id/predition_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/load_data_button" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

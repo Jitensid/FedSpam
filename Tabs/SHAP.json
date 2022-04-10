@@ -1,0 +1,78 @@
+[
+	{
+		"title": "Deep Learning Model Interpretation Using SHAP | by Tony Zhang | Towards Data Science",
+		"url": "https://towardsdatascience.com/deep-learning-model-interpretation-using-shap-a21786e91d16"
+	},
+	{
+		"title": "Explain NLP models with LIME & SHAP | by Susan Li | Towards Data Science",
+		"url": "https://towardsdatascience.com/explain-nlp-models-with-lime-shap-5c5a9f84d59b"
+	},
+	{
+		"title": "BERT SHAP ANALYSIS - Colaboratory",
+		"url": "https://colab.research.google.com/drive/15DVtRCsfyP_3QilwHZGxMGqoKKoyC6bs?authuser=5#scrollTo=S_wIxNNbBws0"
+	},
+	{
+		"title": "python - Bert Tokenizing error ValueError: Input nan is not valid. Should be a string, a list/tuple of strings or a list/tuple of integers - Stack Overflow",
+		"url": "https://stackoverflow.com/questions/64680863/bert-tokenizing-error-valueerror-input-nan-is-not-valid-should-be-a-string-a"
+	},
+	{
+		"title": "python - ValueError when pre-training BERT model using Trainer API - Stack Overflow",
+		"url": "https://stackoverflow.com/questions/70263251/valueerror-when-pre-training-bert-model-using-trainer-api"
+	},
+	{
+		"title": "Interpreting an NLP model with LIME and SHAP | by Kalia Barkai | Medium",
+		"url": "https://medium.com/@kalia_65609/interpreting-an-nlp-model-with-lime-and-shap-834ccfa124e4"
+	},
+	{
+		"title": "Deep Learning Model Interpretation Using SHAP | by Tony Zhang | Towards Data Science",
+		"url": "https://towardsdatascience.com/deep-learning-model-interpretation-using-shap-a21786e91d16"
+	},
+	{
+		"title": "text_classification_shap.ipynb - Colaboratory",
+		"url": "https://colab.research.google.com/github/ml6team/quick-tips/blob/main/nlp/2021_04_22_shap_for_huggingface_transformers/explainable_transformers_using_shap.ipynb?authuser=1#scrollTo=das1RvNUrsE_"
+	},
+	{
+		"title": "text plot — SHAP latest documentation",
+		"url": "https://shap.readthedocs.io/en/latest/example_notebooks/api_examples/plots/text.html#id1"
+	},
+	{
+		"title": "IMDB Dataset of 50K Movie Reviews | Kaggle",
+		"url": "https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews"
+	},
+	{
+		"title": "Very slow data loading on large dataset · Issue #546 · huggingface/datasets",
+		"url": "https://github.com/huggingface/datasets/issues/546"
+	},
+	{
+		"title": "text_classification_shap.ipynb - Colaboratory",
+		"url": "https://colab.research.google.com/github/ml6team/quick-tips/blob/main/nlp/2021_04_22_shap_for_huggingface_transformers/explainable_transformers_using_shap.ipynb"
+	},
+	{
+		"title": "Get first n records of a Pandas DataFrame - GeeksforGeeks",
+		"url": "https://www.geeksforgeeks.org/get-first-n-records-of-a-pandas-dataframe/"
+	},
+	{
+		"title": "encode_plus not returning attention_mask and not padding · Issue #2138 · huggingface/transformers",
+		"url": "https://github.com/huggingface/transformers/issues/2138"
+	},
+	{
+		"title": "BertTokenizer: ValueError: Input is not valid. Should be a string, a list/tuple of strings or a list/tuple of integers. · Issue #4986 · huggingface/transformers",
+		"url": "https://github.com/huggingface/transformers/issues/4986"
+	},
+	{
+		"title": "askpythonquestions.com | 523: Origin is unreachable",
+		"url": "https://askpythonquestions.com/2021/05/06/input-is-not-valid-should-be-a-string-a-list-tuple-of-strings-or-a-list-tuple-of-integers-valueerror-input-is-not-valid/"
+	},
+	{
+		"title": "shap.DeepExplainer — SHAP latest documentation",
+		"url": "https://shap-lrjball.readthedocs.io/en/latest/generated/shap.DeepExplainer.html"
+	},
+	{
+		"title": "#1408 Seems still to not work · Issue #1421 · slundberg/shap",
+		"url": "https://github.com/slundberg/shap/issues/1421"
+	},
+	{
+		"title": "slundberg/shap: A game theoretic approach to explain the output of any machine learning model.",
+		"url": "https://github.com/slundberg/shap"
+	}
+]

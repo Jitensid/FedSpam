@@ -1,0 +1,27 @@
+apply plugin: 'de.undercouch.download'
+
+task downloadLiteModel {
+
+    def downloadFiles = [
+//            "https://drive.google.com/uc?export=download&id=1Nx1_rXUpUbWqS9iZIqvk0xKf3V-wMrwM&confirm=t": "model.zip",
+//            'https://drive.google.com/uc?export=download&id=1InLsBLhBsUZ_IK6aMJFPaiFrsTAkGo7_&confirm=t': 'model.tflite',
+            'https://drive.google.com/uc?export=download&id=1lH8AO78Dxy5rT7K8LmUul8XqEBaFoIa8': 'vocab.txt',
+            'https://drive.google.com/uc?export=download&id=18XTimWqULXDmBrSVQ1GxUkx3L52w7Rbd': 'data.csv',
+//        'https://s3.amazonaws.com/models.huggingface.co/bert/distilbert-base-uncased-distilled-squad-384.tflite': 'model.tflite',
+//        'https://s3.amazonaws.com/models.huggingface.co/bert/distilbert-base-uncased-distilled-squad-384-fp16.tflite': 'model.tflite', // FP16 quantization version
+//        'https://s3.amazonaws.com/models.huggingface.co/bert/distilbert-base-uncased-distilled-squad-384-8bits.tflite': 'model.tflite', // hybrid quantization version
+    ]
+    downloadFiles.each { key, value ->
+      download {
+          src key
+          dest "$projectDir/src/main/assets/" + value
+          overwrite false
+      }
+    }
+}
+//
+//task downloadAndUnzipFile(dependsOn: downloadLiteModel, type: Copy) {
+//    from zipTree("$projectDir/src/main/assets/model.zip")
+//    into "$projectDir/src/main/assets/model/"
+//}
+
