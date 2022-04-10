@@ -145,20 +145,26 @@ public class MainActivity extends AppCompatActivity {
         hideKeyboard(this);
         setResultText("Loading the local training dataset in memory. It will take several seconds.");
         loadDataButton.setEnabled(false);
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    fc.loadDataQuickly(samplesToLoad);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-//                fc.loadData(samplesToLoad);
-                setResultText("Training dataset is loaded in memory.");
-                connectButton.setEnabled(true);
-            }
-        }, 1000);
+
+        DataLoader dataLoader = new DataLoader(fc, samplesToLoad);
+
+        // load the data on another thread
+        new AsyncDataLoad().execute(dataLoader);
+
+//        final Handler handler = new Handler();
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
+//                    fc.loadDataQuickly(samplesToLoad);
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+////                fc.loadData(samplesToLoad);
+//                setResultText("Training dataset is loaded in memory.");
+//                connectButton.setEnabled(true);
+//            }
+//        }, 1000);
 
     }
 
@@ -319,6 +325,47 @@ public class MainActivity extends AppCompatActivity {
                 Log.e(TAG, "ERROR IN ");
                 Log.e(TAG, e.getMessage());
             }
+        }
+    }
+
+    private static class DataLoader {
+        private FlowerClient flowerClient;
+        int maxSamples;
+
+        DataLoader(FlowerClient flowerClient, int maxSamples){
+            this.flowerClient = flowerClient;
+            this.maxSamples = maxSamples;
+        }
+
+        public int getMaxSamples() {
+            return maxSamples;
+        }
+
+        public FlowerClient getFlowerClient() {
+            return flowerClient;
+        }
+    }
+
+    private class AsyncDataLoad extends  AsyncTask<DataLoader, Void, String>{
+
+        @Override
+        protected String doInBackground(DataLoader... dataLoaders) {
+
+            DataLoader dataLoader = dataLoaders[0];
+
+            try {
+                dataLoader.getFlowerClient().loadDataQuickly(dataLoader.getMaxSamples());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return "Data is Successfully Loaded";
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            setResultText(s);
+            connectButton.setEnabled(true);
         }
     }
 
