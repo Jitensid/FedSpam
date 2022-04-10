@@ -35,6 +35,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.protobuf.ByteString;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.nio.ByteBuffer;
@@ -148,7 +149,12 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                fc.loadData(samplesToLoad);
+                try {
+                    fc.loadDataQuickly(samplesToLoad);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+//                fc.loadData(samplesToLoad);
                 setResultText("Training dataset is loaded in memory.");
                 connectButton.setEnabled(true);
             }

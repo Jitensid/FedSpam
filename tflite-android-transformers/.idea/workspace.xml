@@ -13,13 +13,22 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d6dd648-a4d4-4bff-9f29-d9a80fc9a44a" name="Default Changelist" comment="1 Local Epoch Training works Fine" />
+    <list default="true" id="4d6dd648-a4d4-4bff-9f29-d9a80fc9a44a" name="Default Changelist" comment="1 Local Epoch Training works Fine">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_univocity_univocity_parsers_2_9_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bert/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/bert/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bert/src/main/java/co/fedspam/sms/flwr/FlowerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/bert/src/main/java/co/fedspam/sms/flwr/FlowerClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bert/src/main/java/co/fedspam/sms/ui/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/bert/src/main/java/co/fedspam/sms/ui/MainActivity.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[7TPZO7YTZTI7TS6D]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[3959c664]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -33,7 +42,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -45,6 +54,7 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="27Er761pWLNeavBy6tE4Q3o5Tui" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />

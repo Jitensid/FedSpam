@@ -12,15 +12,22 @@ import android.util.Pair;
 import androidx.annotation.WorkerThread;
 import androidx.lifecycle.MutableLiveData;
 
+import com.opencsv.CSVParser;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
+import com.univocity.parsers.common.processor.RowListProcessor;
+import com.univocity.parsers.csv.CsvParser;
+import com.univocity.parsers.csv.CsvParserSettings;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
@@ -110,6 +117,50 @@ public class FlowerClient {
         } catch (IOException | CsvValidationException ex) {
             ex.printStackTrace();
         }
+    }
+
+    public void loadDataQuickly(int maxSamples) throws IOException {
+
+        CsvParserSettings csvParserSettings = new CsvParserSettings();
+        csvParserSettings.setMaxCharsPerColumn(10000);
+
+        CsvParser csvParser = new CsvParser(csvParserSettings);
+
+        // call beginParsing to read records one by one, iterator-style.
+        csvParser.beginParsing(new InputStreamReader(this.context.getAssets().open("data.csv")));
+
+        // to store number of rows being iterated
+        int rowCounter = 0;
+
+        String[] row;
+
+        while ((row = csvParser.parseNext()) != null) {
+
+            Log.i(TAG, row[0]);
+            Log.i(TAG, row[1]);
+
+            // if less than 32 rows then add it to training Data
+            if(rowCounter < maxSamples) {
+                addSample(row[0], Integer.parseInt(row[1]), true);
+             }
+
+            // if more than 32 then add it to testing data
+            else if(rowCounter > maxSamples){
+                addSample(row[0], Integer.parseInt(row[1]), false);
+            }
+
+            // if 2 * maxSamples are read than stop reading data
+            if(rowCounter == 2 * maxSamples){
+                break;
+            }
+
+            rowCounter += 1;
+        }
+
+        // You only need to use this if you are not parsing the entire content.
+        // But it doesn't hurt if you call it anyway.
+        csvParser.stopParsing();
+
     }
 
     private void addSample(String query, int labelId, Boolean isTraining) throws IOException {
