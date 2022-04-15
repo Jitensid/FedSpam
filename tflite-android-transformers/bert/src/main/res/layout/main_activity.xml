@@ -128,6 +128,16 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/load_data_button" />
+
+            <Button
+                android:id="@+id/ondeviceIntelligence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Device Intelligence"
+                app:layout_constraintBottom_toTopOf="@+id/load_data_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/response_textview" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

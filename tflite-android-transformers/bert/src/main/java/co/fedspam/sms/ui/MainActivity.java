@@ -14,12 +14,24 @@ limitations under the License.
 ==============================================================================*/
 package co.fedspam.sms.ui;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.work.Constraints;
+import androidx.work.ExistingPeriodicWorkPolicy;
+import androidx.work.NetworkType;
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkManager;
+import androidx.work.WorkRequest;
+import androidx.work.Worker;
+import androidx.work.WorkerParameters;
 
 import android.os.Handler;
 import android.os.HandlerThread;
@@ -44,8 +56,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 import co.fedspam.android_transformers.R;
+import co.fedspam.sms.background.FederatedLearningWorker;
 import co.fedspam.sms.flwr.FlowerClient;
 import co.fedspam.sms.ml.BertClient;
 import flwr.android_client.ClientMessage;
@@ -60,6 +74,7 @@ import io.grpc.stub.StreamObserver;
 public class MainActivity extends AppCompatActivity {
     private static final boolean DISPLAY_RUNNING_TIME = true;
     private static final String TAG = "SpamClassificationActivity";
+    private static final String WORK_MANAGER_TAG = "WORK_MANAGER_TAG";
     private static final String IP = "192.168.29.254";
     private static final int PORT = 8999;
 
@@ -71,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
     private Button loadDataButton;
     private Button connectButton;
     private Button trainButton;
+    private Button ondeviceIntelligenceButton;
     private FlowerClient fc;
 
     /* GRPC */
@@ -85,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
         loadDataButton = findViewById(R.id.load_data_button);
         connectButton = findViewById(R.id.connect_button);
         trainButton = findViewById(R.id.train_button);
+        ondeviceIntelligenceButton = findViewById(R.id.ondeviceIntelligence);
 
         layout = findViewById(R.id.cord_layout);
         predictionResult = findViewById(R.id.predition_text);
@@ -94,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         loadDataButton.setOnClickListener(view -> loadData(view));
         connectButton.setOnClickListener(view -> connect(view));
         trainButton.setOnClickListener(view -> runGRCP(view));
-
+        ondeviceIntelligenceButton.setOnClickListener(view -> onDeviceIntelligence(view));
 
         // disable both the buttons
         connectButton.setEnabled(false);
@@ -151,20 +168,26 @@ public class MainActivity extends AppCompatActivity {
         // load the data on another thread
         new AsyncDataLoad().execute(dataLoader);
 
-//        final Handler handler = new Handler();
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    fc.loadDataQuickly(samplesToLoad);
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-////                fc.loadData(samplesToLoad);
-//                setResultText("Training dataset is loaded in memory.");
-//                connectButton.setEnabled(true);
-//            }
-//        }, 1000);
+    }
+
+    public void onDeviceIntelligence(View view){
+
+        // mention constraints
+        Constraints.Builder constraintsBuilder = new Constraints.Builder();
+        constraintsBuilder.setRequiredNetworkType(NetworkType.CONNECTED);
+//        constraintsBuilder.setRequiresCharging(true);
+//        constraintsBuilder.setRequiresBatteryNotLow(true);
+//        constraintsBuilder.setRequiresDeviceIdle(true);
+
+        Constraints constraints = constraintsBuilder.build();
+
+        WorkManager workManager = WorkManager.getInstance(this);
+
+        WorkRequest FederatedLearningPeriodicWorkRequest = new PeriodicWorkRequest.Builder(FederatedLearningWorker.class, 15, TimeUnit.MINUTES).setConstraints(constraints).build();
+
+        workManager.getInstance(this).enqueueUniquePeriodicWork(WORK_MANAGER_TAG, ExistingPeriodicWorkPolicy.KEEP, (PeriodicWorkRequest) FederatedLearningPeriodicWorkRequest);
+
+        Log.i(WORK_MANAGER_TAG, "Added A new WorkManager Instance");
 
     }
 

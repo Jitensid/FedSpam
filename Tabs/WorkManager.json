@@ -1,0 +1,82 @@
+[
+	{
+		"title": "developer.android.com",
+		"url": "https://developer.android.com/oauth2callback?state=%7B%22csrf_token%22%3A+%229e37c6637d08dc7842bc2152450ad25131fc2659dfcb03023f229f2c6370676c%22%2C+%22return_url%22%3A+%22https%3A%2F%2Fdeveloper.android.com%2Ftopic%2Flibraries%2Farchitecture%2Fworkmanager%2Fbasics%22%7D&error_subtype=access_denied&error=interaction_required#java"
+	},
+	{
+		"title": "Android WorkManager with an Example 👷‍♂️ | by Furkan Paşaoğlu | DigiGeek | Medium",
+		"url": "https://medium.com/digigeek/android-work-manager-with-an-example-%EF%B8%8F-63d1b29955d4"
+	},
+	{
+		"title": "WorkManager Tutorial for Android: Getting Started | raywenderlich.com",
+		"url": "https://www.raywenderlich.com/6040-workmanager-tutorial-for-android-getting-started"
+	},
+	{
+		"title": "Background Work with WorkManager - Java  |  Android Developers",
+		"url": "https://developer.android.com/codelabs/android-workmanager-java#3"
+	},
+	{
+		"title": "Schedule tasks with WorkManager  |  Android Developers",
+		"url": "https://developer.android.com/topic/libraries/architecture/workmanager"
+	},
+	{
+		"title": "Using Work Manager in Android with Example - Java Code Geeks - 2022",
+		"url": "https://www.javacodegeeks.com/2020/09/using-work-manager-in-android-with-example.html"
+	},
+	{
+		"title": "Newest 'android-workmanager' Questions - Stack Overflow",
+		"url": "https://stackoverflow.com/questions/tagged/android-workmanager"
+	},
+	{
+		"title": "Introducing WorkManager. This series of blog posts will… | by Pietro Maggi | Android Developers | Medium",
+		"url": "https://medium.com/androiddevelopers/introducing-workmanager-2083bcfc4712"
+	},
+	{
+		"title": "how to use Work Manager API - Google Search",
+		"url": "https://www.google.com/search?q=how+to+use+Work+Manager+API&oq=how+to+use+Work+Manager+API++&aqs=chrome..69i57.24325j0j1&sourceid=chrome&ie=UTF-8"
+	},
+	{
+		"title": "Google",
+		"url": "https://www.google.com/?&bih=605&biw=1280&hl=en"
+	},
+	{
+		"title": "android - WorkManager returns result before completion of async method in it - Stack Overflow",
+		"url": "https://stackoverflow.com/questions/55371452/workmanager-returns-result-before-completion-of-async-method-in-it"
+	},
+	{
+		"title": "Threading in WorkManager  |  Android Developers",
+		"url": "https://developer.android.com/topic/libraries/architecture/workmanager/advanced/threading"
+	},
+	{
+		"title": "Step by Step Guide to Download Files With WorkManager | by Rahul Ray | Mar, 2022 | ProAndroidDev",
+		"url": "https://proandroiddev.com/step-by-step-guide-to-download-files-with-workmanager-b0231b03efd1"
+	},
+	{
+		"title": "how to pass object as input to WorkManager without Serialization? - Stack Overflow",
+		"url": "https://stackoverflow.com/questions/55876824/how-to-pass-object-as-input-to-workmanager-without-serialization"
+	},
+	{
+		"title": "java - Reliably convert any object to String and then back again - Stack Overflow",
+		"url": "https://stackoverflow.com/questions/8887197/reliably-convert-any-object-to-string-and-then-back-again"
+	},
+	{
+		"title": "OneTimeWorkRequest.Builder  |  Android Developers",
+		"url": "https://developer.android.com/reference/androidx/work/OneTimeWorkRequest.Builder"
+	},
+	{
+		"title": "WorkManager periodicity. A deep dive into how WorkManager handle… | by Pietro Maggi | Android Developers | Medium",
+		"url": "https://medium.com/androiddevelopers/workmanager-periodicity-ff35185ff006"
+	},
+	{
+		"title": "PeriodicWorkRequest.Builder  |  Android Developers",
+		"url": "https://developer.android.com/reference/androidx/work/PeriodicWorkRequest.Builder"
+	},
+	{
+		"title": "WorkManager Tutorial for Android: Getting Started | raywenderlich.com",
+		"url": "https://www.raywenderlich.com/6040-workmanager-tutorial-for-android-getting-started"
+	},
+	{
+		"title": "Managing work  |  Android Developers",
+		"url": "https://developer.android.com/topic/libraries/architecture/workmanager/how-to/managing-work"
+	}
+]
