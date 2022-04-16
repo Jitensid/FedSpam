@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Message Received by"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="message"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:id="@+id/message"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="number"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:id="@+id/number"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Msgclass"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:id="@+id/msgClass"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="GetButton"
+        android:id="@+id/getButton"></Button>
+</LinearLayout>
