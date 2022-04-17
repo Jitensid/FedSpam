@@ -76,3 +76,5 @@ bert/src/main/assets/model/inference.tflite
 bert/src/main/assets/model/initialize.tflite
 bert/src/main/assets/model/optimizer.tflite
 bert/src/main/assets/model/train_head.tflite
+
+tflite-android-transformers/.idea/
