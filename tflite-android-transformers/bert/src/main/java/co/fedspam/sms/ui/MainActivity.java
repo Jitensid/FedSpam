@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
 
         WorkRequest FederatedLearningPeriodicWorkRequest = new PeriodicWorkRequest.Builder(FederatedLearningWorker.class, 15, TimeUnit.MINUTES).setConstraints(constraints).build();
 
-        workManager.getInstance(this).enqueueUniquePeriodicWork(WORK_MANAGER_TAG, ExistingPeriodicWorkPolicy.REPLACE, (PeriodicWorkRequest) FederatedLearningPeriodicWorkRequest);
+        workManager.getInstance(this).enqueueUniquePeriodicWork(WORK_MANAGER_TAG, ExistingPeriodicWorkPolicy.KEEP, (PeriodicWorkRequest) FederatedLearningPeriodicWorkRequest);
 
         Log.i(WORK_MANAGER_TAG, "Added A new WorkManager Instance");
 
