@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Acer/Documents/FedSpam/tflite-android-transformers-new/bert/src/main/res/layout/main_activity.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/Acer/Documents/FedSpam/tflite-android-transformers-new/bert/src/main/res/layout/sms_details_activity.xml" value="0.22916666666666666" />
+        <entry key="..\:/Users/Acer/Documents/FedSpam/tflite-android-transformers-new/bert/src/main/res/layout/sms_list_item.xml" value="0.19157608695652173" />
+        <entry key="..\:/Users/Acer/Documents/FedSpam/tflite-android-transformers-new/bert/src/main/res/layout/sms_list_view.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/jiten/Desktop/Major Project/Implementation/tflite-android-transformers/bert/src/main/res/layout/main_activity.xml" value="0.17552083333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
