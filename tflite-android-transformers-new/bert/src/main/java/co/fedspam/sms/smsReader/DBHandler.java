@@ -141,7 +141,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
         // on below line we are creating a cursor with query to read data from database.
         //
-        Cursor cursorMessages = db.rawQuery(String.format("SELECT * FROM %s WHERE %s = false LIMIT %d", TABLE_NAME, FLAG_COL, count), null);
+        Cursor cursorMessages = db.rawQuery(String.format("SELECT * FROM %s WHERE %s = \"false\" LIMIT %d", TABLE_NAME, FLAG_COL, count), null);
 
         // on below line we are creating a new array list.
         ArrayList<MessageList> messageArrayList = new ArrayList<>();

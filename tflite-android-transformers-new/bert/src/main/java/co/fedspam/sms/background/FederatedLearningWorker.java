@@ -38,7 +38,7 @@ import io.grpc.stub.StreamObserver;
 public class FederatedLearningWorker extends Worker {
     private static final String WORK_MANAGER_TAG = "WORK_MANAGER_TAG";
 
-    private static final String IP = "192.168.29.254";
+    private static final String IP = "172.16.31.12";
 
     private static final int PORT = 8999;
 

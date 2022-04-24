@@ -175,7 +175,10 @@ public class FlowerClient {
 
     public void loadDataFromDB(DBHandler dbHandler, int count) throws IOException {
         ArrayList<MessageList> msgList = dbHandler.getTrainData(count);
-        int traningSamples = msgList.size() - msgList.size() / 8;
+        int traningSamples = msgList.size();
+
+        Log.i("MESSAGE", String.valueOf(msgList.size()));
+
         if (traningSamples < 32){
             throw new RuntimeException("Training data less than 32 samples!");
         }
@@ -184,8 +187,10 @@ public class FlowerClient {
             String label = msg.getLabel();
             int labelId = 0;
             if (label.equals("spam")) labelId = 1;
-            if (i < traningSamples) addSample(msg.getMessage(),  labelId,true);
-            else addSample(msg.getMessage(),  labelId,false);
+            if (i < traningSamples) {
+                addSample(msg.getMessage(), labelId, true);
+                addSample(msg.getMessage(),  labelId,false);
+            }
             i++;
         }
     }

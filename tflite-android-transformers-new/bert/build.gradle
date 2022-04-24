@@ -69,25 +69,25 @@ def modelUrl = 'https://drive.google.com/uc?export=download&id=1Nx1_rXUpUbWqS9iZ
 def modelArchivePath = "${buildDir}/model.zip"
 def modelTargetLocation = "${projectDir}/src/main/assets/model"
 
-task downloadModelAndData(type: DefaultTask){
-    doFirst {
-        println "Downloading and unpacking the model..."
-        mkdir project.buildDir
-    }
-
-    doLast {
-        ant.mkdir(dir: modelTargetLocation)
-
-        // If you want to use your own models rather than pre-built models,
-        // comment out the following three lines.
-        ant.get(src: modelUrl, dest: modelArchivePath)
-        ant.unzip(src: modelArchivePath, dest: modelTargetLocation)
-        ant.delete(file: modelArchivePath)
-
-    }
-}
-
-preBuild.dependsOn downloadModelAndData
+//task downloadModelAndData(type: DefaultTask){
+//    doFirst {
+//        println "Downloading and unpacking the model..."
+//        mkdir project.buildDir
+//    }
+//
+//    doLast {
+//        ant.mkdir(dir: modelTargetLocation)
+//
+//        // If you want to use your own models rather than pre-built models,
+//        // comment out the following three lines.
+//        ant.get(src: modelUrl, dest: modelArchivePath)
+//        ant.unzip(src: modelArchivePath, dest: modelTargetLocation)
+//        ant.delete(file: modelArchivePath)
+//
+//    }
+//}
+//
+//preBuild.dependsOn downloadModelAndData
 
 
 dependencies {
